@@ -157,7 +157,7 @@ ROC кривая идеального алгорима проходит чере
         \hline
     \end{tabular}}
     & 
-    \raisebox{-\totalheight}{\includegraphics[scale=0.4]{images/roc-auc.eps}}
+    \raisebox{-\totalheight}{\includegraphics[scale=0.4]{images/roc-curve.eps}}
 \end{tabular}
 
 \subsection{ROC-AUC}
@@ -186,9 +186,20 @@ $$
 
 PR кривая идеального алгорима проходит через точки $(0,1)$, $(1,1)$, $(1,\#[y=1]/n)$; для случайного гадания - проходит вблизи прямой $precision = \#[y=1]/n$.
 
-\textbf{Пример:}
+\textbf{Пример:} для алгоритма, дающего вывод как в таблице ниже, график $PR$ кривой выглядит следующим образом
 
-????
+\begin{tabular}{ c c }
+    \raisebox{-\totalheight}{
+    \begin{tabular}{|c|c|c|c|c|c|c|c|} 
+        \hline
+        y & 1 & 0 & 0 & 1 & 0 & 1 & 0 \\ 
+        \hline
+        a & 1.0 & 0.9 & 0.9 & 0.9 & 0.8 & 0.3 & 0.2 \\
+        \hline
+    \end{tabular}}
+    & 
+    \raisebox{-\totalheight}{\includegraphics[scale=0.4]{images/pr-curve.eps}}
+\end{tabular}
 
 \subsection{PR-AUC}
 
@@ -196,7 +207,7 @@ PR-AUC - площадь под PR кривой. Применяется к алг
 
 PR-AUC - площадь под PR кривой. Принимает значения от $0$ до $1$. Значения близкие к $1$ интерпретируются как хорошие, близкие к $\#[y=1]/n$ - как самые худшие (случайные гадания). PR-AUC более устойчива к дисбалансу классов, чем ROC-AUC, однако, не учитывает уверенность алгоритма в своих предсказаниях (насколько близко распределены предсказания к $0$ и $1$).
 
-PR-AUC для примера \ref{pr-curve} равна $???$.
+PR-AUC для примера \ref{pr-curve} равна $11/15\approx 0.73$.
 
 \subsection{Бинарная кросс-энтропия (logloss)}
 
