@@ -1,0 +1,3 @@
+pdflatex -output-directory=../out -interaction=nonstopmode -shell-escape main.tex
+
+git config user.email 'spmathf@gmail.com' 
